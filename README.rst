@@ -97,7 +97,9 @@ A more elaborate example::
 
 An example with multiple subplots (new in version 0.6)::
 
+    from matplotlib import pyplot as plt
     from matplotlib_venn import venn2, venn2_circles
+    from matplotlib_venn import venn3, venn3_circles
     figure, axes = plt.subplots(2, 2)
     venn2(subsets={'10': 1, '01': 1, '11': 1}, set_labels = ('A', 'B'), ax=axes[0][0])
     venn2_circles((1, 2, 3), ax=axes[0][1])
@@ -108,6 +110,8 @@ An example with multiple subplots (new in version 0.6)::
 Perhaps the most common use case is generating a Venn diagram given
 three sets of objects::
 
+    from matplotlib import pyplot as plt
+    from matplotlib_venn import venn3, venn3_circles
     set1 = set(['A', 'B', 'C', 'D'])
     set2 = set(['B', 'C', 'D', 'E'])
     set3 = set(['C', 'D',' E', 'F', 'G'])
